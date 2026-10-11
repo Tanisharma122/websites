@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hearthline Interiors | See your room finished</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1E2A32;--fog:#E9ECEA;--brass:#B08D57;--mut:#5b6870}
+*{box-sizing:border-box;margin:0}
+body{font:17px/1.6 'Hanken Grotesk',system-ui,sans-serif;background:var(--fog);color:var(--ink)}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;line-height:1.02}
+.w{max-width:1100px;margin:auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;padding:22px 0;font-weight:500}nav b{font:800 22px Syne}
+h1{font-size:clamp(38px,6.5vw,88px);font-weight:800;letter-spacing:-.035em;max-width:14ch;padding:36px 0 14px}
+.sub{color:var(--mut);max-width:50ch;margin-bottom:34px}
+.ba{position:relative;aspect-ratio:16/8;border-radius:24px;overflow:hidden;user-select:none;box-shadow:0 40px 80px -40px #1e2a3299}
+.room{position:absolute;inset:0}
+.room::before{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:var(--f)}
+.room i{position:absolute;display:block}
+.sofa{left:14%;bottom:26%;width:36%;height:22%;border-radius:12px 12px 6px 6px;background:var(--s)}
+.sofa::after{content:"";position:absolute;left:4%;right:4%;top:-30%;height:45%;border-radius:12px;background:var(--s);filter:brightness(1.1)}
+.lamp{right:20%;bottom:30%;width:4px;height:42%;background:var(--l)}
+.lamp::before{content:"";position:absolute;left:-26px;top:-18px;width:56px;height:34px;border-radius:30px 30px 4px 4px;background:var(--lh)}
+.art{right:34%;top:16%;width:11%;height:26%;background:var(--a)}
+.before{--f:#a9aaa6;background:#c9cac6;--s:#8e8f8b;--l:#777;--lh:#999;--a:#b4b5b1}
+.after{--f:#6d4b34;background:linear-gradient(90deg,#27363d,#34464d);--s:#B08D57;--l:#d9b778;--lh:#ffe2a8;--a:#e8e1d2;clip-path:inset(0 0 0 var(--p,50%))}
+.after .lamp::before{box-shadow:0 0 90px 40px #ffd58a88}
+.tag{position:absolute;top:16px;padding:6px 12px;border-radius:99px;font-size:14px;font-weight:500;background:#fff;color:var(--ink)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.h{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;pointer-events:none}
+.h::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-content:center;font-size:20px;box-shadow:0 6px 20px #0004}
+.ba:focus-within{outline:3px solid var(--brass);outline-offset:4px}
+.hint{font-size:14px;color:var(--mut);margin:12px 0 70px}
+h2{font-size:clamp(28px,4vw,44px);margin-bottom:24px;font-weight:800;letter-spacing:-.02em}
+.p{display:grid;grid-template-columns:140px 1fr auto;gap:20px;align-items:baseline;padding:22px 0;border-top:1.5px solid #c9cfcc;transition:background .3s,padding .3s}
+.p:hover{background:#dde2df;padding-left:16px}.p b{font:800 24px Syne}.p span{color:var(--mut)}
+.q{margin:70px 0;background:var(--ink);color:#fff;border-radius:28px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.q h2{margin:0;max-width:16ch}
+.q a{background:var(--brass);color:#1a1409;padding:15px 26px;border-radius:99px;font-weight:500;text-decoration:none;transition:transform .2s}.q a:hover{transform:translateY(-3px)}
+a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+footer{padding-bottom:40px;color:var(--mut);font-size:14px}
+@media(max-width:700px){.p{grid-template-columns:1fr;gap:4px}.ba{aspect-ratio:4/3}.q{padding:30px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><div class="w">
+<nav><b>Hearthline</b><span>Interior design, Ahmedabad</span></nav>
+<h1>See your room finished before we start.</h1>
+<p class="sub">Every project begins with a 3D render of your own space. Drag the line to see what a flat looks like before and after.</p>
+<div class="ba" id="ba"><div class="room before"><i class="art"></i><i class="sofa"></i><i class="lamp"></i></div>
+<div class="room after"><i class="art"></i><i class="sofa"></i><i class="lamp"></i></div>
+<span class="tag" style="left:16px">Before</span><span class="tag" style="right:16px">After</span>
+<div class="h"></div><input type="range" min="0" max="100" value="50" id="r" aria-label="Before and after slider"></div>
+<p class="hint">Sample illustration. Swap in your own project photos.</p>
+<h2>Recent projects</h2>
+<div class="p"><b>2 BHK</b><span>Bopal. Warm wood, concealed lighting, 45 day handover.</span><span>₹8.5L</span></div>
+<div class="p"><b>3 BHK</b><span>Satellite. Modular kitchen and a home office nook.</span><span>₹14L</span></div>
+<div class="p"><b>Cafe</b><span>CG Road. Seating for 40, finished in 30 days.</span><span>₹18L</span></div>
+<div class="q"><h2>Get a render of your room.</h2><a href="https://wa.me/910000000000?text=Hi%20Hearthline%2C%20I%20want%20a%20quote">Message us on WhatsApp</a></div>
+<footer>Demo website by Blackvein Studio. Sample studio and prices.</footer></div>
+<script>r.oninput=()=>ba.style.setProperty('--p',r.value+'%')</script></body></html>

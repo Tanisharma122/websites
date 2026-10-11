@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Smilekraft Dental | Book in 20 seconds</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3FAF7;--ink:#0E3B34;--acc:#1FB58F;--peach:#FFD9C7;--mut:#4d6b64}
+*{box-sizing:border-box;margin:0}
+body{font:17px/1.6 'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.05}
+nav,section,footer{max-width:1080px;margin:auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding-top:22px;font-weight:500}
+nav b{font:800 22px 'Bricolage Grotesque'}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:72px}
+h1{font-size:clamp(40px,6vw,72px);font-weight:800;letter-spacing:-.03em}
+.hero p{margin:20px 0;color:var(--mut);max-width:44ch}
+.book{background:#fff;border-radius:28px;padding:26px;box-shadow:0 30px 60px -30px #0e3b3466;position:relative}
+.book h3{font-size:22px;margin-bottom:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.row button{font:inherit;border:1.5px solid #cfe5dd;background:#fff;color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;transition:.2s}
+.row button:hover{border-color:var(--acc)}
+.row button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.go{width:100%;font:500 17px 'DM Sans';background:var(--acc);color:#04261f;border:0;padding:15px;border-radius:16px;cursor:pointer}
+.go:disabled{opacity:.4;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.ok{position:absolute;inset:0;background:var(--ink);color:#fff;border-radius:28px;display:grid;place-content:center;text-align:center;padding:30px;opacity:0;pointer-events:none;transform:scale(.96);transition:.45s cubic-bezier(.2,.9,.3,1.2)}
+.ok.show{opacity:1;pointer-events:auto;transform:none}
+.ok svg{width:72px;margin:0 auto 14px;stroke:var(--acc);stroke-width:5;fill:none;stroke-dasharray:60;stroke-dashoffset:60}
+.ok.show svg{animation:d .7s .3s forwards}@keyframes d{to{stroke-dashoffset:0}}
+.ok a{color:var(--peach);cursor:pointer;margin-top:14px;display:inline-block}
+.list{padding-bottom:72px}
+.list h2,.flow h2{font-size:clamp(30px,4vw,46px);margin-bottom:28px;letter-spacing:-.02em}
+.t{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-top:1.5px solid #cfe5dd;transition:padding .3s}
+.t:hover{padding-left:14px}.t b{font:800 24px 'Bricolage Grotesque'}.t span{color:var(--mut);max-width:38ch;text-align:right}
+.flow{background:var(--peach);border-radius:36px;padding:48px 40px;margin-bottom:72px}
+.flow ol{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;list-style:none;padding:0}
+.flow li b{display:block;font:800 22px 'Bricolage Grotesque';margin-bottom:6px}
+footer{padding-bottom:40px;color:var(--mut);font-size:14px}
+@media(max-width:800px){.hero,.flow ol{grid-template-columns:1fr}.t{flex-direction:column}.t span{text-align:left}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<nav><b>Smilekraft</b><span>Navrangpura, Ahmedabad</span></nav>
+<section class="hero"><div>
+<h1>Book your dental visit in 20 seconds.</h1>
+<p>Pick a day and time. You get a WhatsApp confirmation right away and a reminder the day before. No calls, no waiting on hold.</p></div>
+<div class="book"><h3>Choose a slot</h3>
+<div class="row" id="d"><button>Mon 12</button><button>Tue 13</button><button>Wed 14</button><button>Thu 15</button></div>
+<div class="row" id="t"><button>10:00</button><button>11:30</button><button>2:00</button><button>4:30</button><button>6:00</button></div>
+<button class="go" id="go" disabled>Confirm appointment</button>
+<div class="ok" id="ok"><svg viewBox="0 0 60 60"><path d="M12 31l12 12 24-26"/></svg><h3 id="m">Booked</h3><p>Confirmation sent on WhatsApp.</p><a id="re" tabindex="0">Change slot</a></div></div></section>
+<section class="list"><h2>What we treat</h2>
+<div class="t"><b>Cleaning and whitening</b><span>A 40 minute visit, usually pain free.</span></div>
+<div class="t"><b>Braces and aligners</b><span>Free scan and a written plan before you pay anything.</span></div>
+<div class="t"><b>Root canal</b><span>Single sitting where possible, with a fixed quote.</span></div>
+<div class="t"><b>Kids dentistry</b><span>Gentle visits, with a play corner in the waiting room.</span></div></section>
+<section><div class="flow"><h2>After you book</h2><ol>
+<li><b>Instant confirmation</b>Your slot, the address and a map pin land on WhatsApp.</li>
+<li><b>Reminder the day before</b>Reply once to reschedule. The front desk sees it.</li>
+<li><b>Follow-up after the visit</b>Care instructions, then a short review request.</li></ol></div></section>
+<footer>Demo website by Blackvein Studio. Sample business, not a real clinic.</footer>
+<script>
+const $=s=>document.querySelector(s);let d,t;
+function pick(box,set){box.addEventListener('click',e=>{if(e.target.tagName!='BUTTON')return;box.querySelectorAll('button').forEach(b=>b.classList.remove('on'));e.target.classList.add('on');set(e.target.textContent);$('#go').disabled=!(d&&t)})}
+pick($('#d'),v=>d=v);pick($('#t'),v=>t=v);
+$('#go').onclick=()=>{$('#m').textContent=`Booked: ${d}, ${t}`;$('#ok').classList.add('show')};
+$('#re').onclick=()=>$('#ok').classList.remove('show');
+</script></body></html>

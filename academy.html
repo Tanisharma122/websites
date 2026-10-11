@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rankforge Academy | JEE and NEET coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1B2BFF;--w:#fff;--o:#FF7A3D;--soft:#C9CEFF}
+*{box-sizing:border-box;margin:0}
+body{font:18px/1.55 Archivo,system-ui,sans-serif;background:var(--blue);color:var(--w)}
+h1,h2{font-family:'Big Shoulders Display',Impact,sans-serif;text-transform:uppercase;line-height:.9;font-weight:900}
+.w{max-width:1100px;margin:auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;padding:22px 0;font-weight:600}
+nav b{font:900 26px 'Big Shoulders Display'}
+h1{font-size:clamp(64px,12vw,160px);letter-spacing:-.01em;padding:30px 0 10px}
+h1 span{display:block;color:var(--o)}
+.lead{max-width:46ch;color:var(--soft);margin:18px 0 40px}
+.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding-bottom:70px}
+.bars{display:flex;align-items:flex-end;gap:14px;height:260px;border-bottom:3px solid var(--w)}
+.bar{flex:1;background:var(--w);height:0;border-radius:6px 6px 0 0;position:relative;animation:up 1.1s cubic-bezier(.2,.8,.2,1) forwards}
+.bar:nth-child(2){animation-delay:.15s;background:var(--soft)}.bar:nth-child(3){animation-delay:.3s;background:var(--o)}.bar:nth-child(4){animation-delay:.45s}.bar:nth-child(5){animation-delay:.6s;background:var(--o)}
+.bar i{position:absolute;top:-30px;left:0;right:0;text-align:center;font:900 24px 'Big Shoulders Display';font-style:normal}
+@keyframes up{to{height:var(--h)}}
+.cap{margin-top:10px;color:var(--soft);font-size:14px;display:flex;justify-content:space-between}
+form{background:var(--w);color:#0a0f5c;border-radius:22px;padding:28px;position:relative;overflow:hidden}
+form h2{font-size:40px;margin-bottom:6px}
+label{display:block;font-weight:600;font-size:15px;margin-top:14px}
+input,select{width:100%;font:inherit;padding:12px 14px;border:2px solid #d5d8ff;border-radius:12px;margin-top:6px}
+input:focus,select:focus,button:focus-visible{outline:3px solid var(--o);outline-offset:1px}
+button{margin-top:20px;width:100%;font:900 22px 'Big Shoulders Display';text-transform:uppercase;letter-spacing:.03em;background:var(--o);color:#1a0a00;border:0;border-radius:12px;padding:14px;cursor:pointer;transition:transform .15s}
+button:active{transform:scale(.97)}
+.done{display:none;margin-top:18px;padding:16px;background:#eaffe9;border-radius:12px;color:#0b4a12}
+.done.on{display:block;animation:pop .4s}@keyframes pop{from{transform:translateY(10px);opacity:0}}
+.mq{background:var(--o);color:#1a0a00;overflow:hidden;white-space:nowrap;font:900 34px 'Big Shoulders Display';text-transform:uppercase;padding:10px 0}
+.mq div{display:inline-block;animation:m 22s linear infinite}@keyframes m{to{transform:translateX(-50%)}}
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:70px 0}
+.pts h2{font-size:44px;margin-bottom:8px}.pts p{color:var(--soft)}
+footer{padding:0 0 40px;color:var(--soft);font-size:14px}
+@media(max-width:800px){.grid,.pts{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important}}
+</style></head><body>
+<div class="w"><nav><b>Rankforge</b><span>Batches start 1 Nov</span></nav>
+<h1>Crack JEE <span>with a plan, not luck.</span></h1>
+<p class="lead">Small batches of 30. Weekly tests, marked within 24 hours, and a parent report every Sunday.</p>
+<div class="grid"><div><div class="bars" aria-label="Average rank improvement by month">
+<div class="bar" style="--h:18%"><i>Mo 1</i></div><div class="bar" style="--h:38%"><i>Mo 2</i></div><div class="bar" style="--h:58%"><i>Mo 3</i></div><div class="bar" style="--h:78%"><i>Mo 4</i></div><div class="bar" style="--h:96%"><i>Mo 5</i></div></div>
+<div class="cap"><span>Sample chart: average test score by month</span><span>Replace with real data</span></div></div>
+<form id="f"><h2>Reserve a free demo class</h2><p>We reply on WhatsApp in under a minute.</p>
+<label for="n">Student name</label><input id="n" required>
+<label for="p">WhatsApp number</label><input id="p" type="tel" required pattern="[0-9 +]{10,14}">
+<label for="c">Class</label><select id="c"><option>Class 11</option><option>Class 12</option><option>Dropper</option></select>
+<button>Reserve my seat</button><div class="done" id="d" role="status"></div></form></div></div>
+<div class="mq"><div>Weekly tests &nbsp;•&nbsp; Doubt solving till 9 pm &nbsp;•&nbsp; Parent reports &nbsp;•&nbsp; 30 seats per batch &nbsp;•&nbsp; Weekly tests &nbsp;•&nbsp; Doubt solving till 9 pm &nbsp;•&nbsp; Parent reports &nbsp;•&nbsp; 30 seats per batch &nbsp;•&nbsp;</div></div>
+<div class="w"><div class="pts"><div><h2>Weekly test</h2><p>Every Saturday, marked and reviewed by Monday.</p></div><div><h2>Doubt desk</h2><p>Post a photo on WhatsApp, get a worked answer the same day.</p></div><div><h2>Parent report</h2><p>Attendance, scores and one line on what to fix next.</p></div></div>
+<footer>Demo website by Blackvein Studio. Sample institute.</footer></div>
+<script>
+f.onsubmit=e=>{e.preventDefault();d.textContent=`Seat held for ${n.value} (${c.value}). Check WhatsApp on ${p.value}.`;d.classList.add('on');f.querySelector('button').textContent='Seat reserved'}
+</script></body></html>
