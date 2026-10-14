@@ -9,21 +9,21 @@ A physics-based, interactive React component featuring vintage instant Polaroid 
 ### Figure 1: Minimal Carousel Demo View
 *Clean, distraction-free gallery line with cream background, wooden pegs, sag curvature, and pagination controls.*
 
-![Minimal Carousel Demo](docs/images/minimal-carousel-demo.png)
+![Minimal Carousel Demo](minimal-carousel-demo/docs/images/minimal-carousel-demo.png)
 
 ---
 
 ### Figure 2: Travel Expedition Landing Page Theme (Hero Section)
 *Full-featured editorial showcase with sticky navigation, camera badge, high-resolution alpine photography, and responsive typography.*
 
-![Landing Page Theme - Hero View](docs/images/landing-page-hero.png)
+![Landing Page Theme - Hero View](minimal-carousel-demo/docs/images/landing-page-hero.png)
 
 ---
 
 ### Figure 3: Kinetic Physics & Interactive Field Notes (Scrolled View)
 *Under-carousel feature breakdown detailing spring physics, procedural canvas generation, and live active-slide story synchronization.*
 
-![Landing Page Theme - Scrolled View](docs/images/landing-page-field-notes.png)
+![Landing Page Theme - Scrolled View](minimal-carousel-demo/docs/images/landing-page-field-notes.png)
 
 ---
 
